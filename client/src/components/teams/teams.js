@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './teams.css'
 
 const Teams = () => {
@@ -14,13 +13,28 @@ const Teams = () => {
         <div>
             <h1>Premier league teams</h1>
 
-            <ul>
-                {data.map((item) => (
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Rank</th>
+                        <th>Points</th>
+                        <th>Wins</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                    <li key={item.team_id}>{item.team_name} Rank: {item.overall_league_position}</li>
-                ))}
-            </ul>
+                    {data.map((item) => (
+                        <tr>
+                            <td>{item.team_name}</td>
+                            <td>{item.overall_league_position}</td>
+                            <td>{item.overall_league_PTS}</td>
+                            <td>{item.overall_league_W}</td>
+                        </tr>
 
+                    ))}
+                </tbody>
+            </table>
         </div >
     )
 }

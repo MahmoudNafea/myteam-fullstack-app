@@ -1,6 +1,6 @@
 body {
     color:wheat;
-    background-color: #9c13cf;
+    background-color: #cf13bf;
     font-family: Arial;
     max-width: 650px;
     margin: 0 auto;
@@ -15,4 +15,14 @@ margin-bottom: 16px;
 }
 ul {
     list-style-type: none;
+  }
+  table,th,td{
+      table-layout: auto;
+      border: 1px solid blue;
+  }
+  @media (min-width: 600px) {
+    body{
+        max-width: 100px;
+
+    }
   }

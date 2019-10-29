@@ -1,0 +1,21 @@
+.search {
+    width: 30rem;
+    margin: 2rem auto;
+    max-width: 80%;
+  }
+  
+  .search-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    box-sizing: border-box; 
+  }
+  @media (min-width: 768px) {
+    .search-input {
+      flex-direction: row;
+    }
+  }
